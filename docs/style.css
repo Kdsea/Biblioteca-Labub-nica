@@ -1,7 +1,5 @@
 /* ==========================================================
-   CONTOS PARA DORMIR — estilos
-   Paleta rosa + modo escuro, livro central com animação de
-   abertura e virada de página.
+   CONTOS PARA DORMIR — estilos (Otimizado para Celular)
    ========================================================== */
 
 :root {
@@ -344,25 +342,13 @@ button:focus-visible,
   scrollbar-color: var(--accent-soft) transparent;
 }
 
-/* barra de rolagem — Chrome, Safari, Edge */
-.story-list::-webkit-scrollbar {
-  width: 8px;
-}
-
-.story-list::-webkit-scrollbar-track {
-  background: transparent;
-}
-
+.story-list::-webkit-scrollbar { width: 8px; }
+.story-list::-webkit-scrollbar-track { background: transparent; }
 .story-list::-webkit-scrollbar-thumb {
   background-color: var(--accent-soft);
   background-clip: padding-box;
   border: 2px solid transparent;
   border-radius: 999px;
-  transition: background-color 0.25s ease;
-}
-
-.story-list::-webkit-scrollbar-thumb:hover {
-  background-color: var(--accent);
 }
 
 .story-item {
@@ -425,7 +411,7 @@ button:focus-visible,
   overflow: hidden;
 }
 
-/* ---------- botões de virar página (cantos) ---------- */
+/* ---------- botões de virar página ---------- */
 .page-nav {
   position: absolute;
   bottom: 0.6rem;
@@ -458,15 +444,103 @@ button:focus-visible,
   color: var(--ink-soft);
 }
 
-/* ---------- responsivo ---------- */
+/* ---------- RESPONSIVO PARA CELULAR ---------- */
 @media (max-width: 640px) {
-  .book { aspect-ratio: 11 / 13; }
-  .spread { grid-template-columns: 1fr; grid-template-rows: 1fr auto 1fr; }
-  .spine { width: 100%; height: 12px; background: linear-gradient(180deg, transparent, var(--spine-shadow), transparent); }
-  .page { padding: 1.4rem 1.3rem; }
-  .page-left { order: 1; }
-  .spine { order: 2; }
-  .page-right-stack { order: 3; }
+  .stage {
+    padding: 3.5rem 0.5rem 1rem 0.5rem;
+    align-items: center;
+  }
+  
+  .book {
+    width: 96vw;
+    height: 82vh;
+    aspect-ratio: auto;
+  }
+
+  .spread {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 6px 1fr;
+    height: 100%;
+  }
+
+  .spine {
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(180deg, transparent, var(--spine-shadow), transparent);
+  }
+
+  .page {
+    padding: 1.1rem 1rem;
+  }
+
+  .page-left {
+    order: 1;
+  }
+
+  .spine {
+    order: 2;
+  }
+
+  .page-right-stack {
+    order: 3;
+    height: 100%;
+  }
+
+  .story-text {
+    font-size: 0.94rem;
+    line-height: 1.6;
+    padding-bottom: 2.2rem;
+  }
+
+  .left-eyebrow {
+    font-size: 1.25rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .left-note {
+    font-size: 0.85rem;
+  }
+
+  .reading-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .reading-progress {
+    margin-bottom: 0.6rem;
+  }
+
+  .back-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .page-nav {
+    width: 2.3rem;
+    height: 2.3rem;
+    font-size: 1rem;
+    bottom: 0.4rem;
+  }
+
+  .page-end-note {
+    bottom: 0.5rem;
+    right: 0.7rem;
+    font-size: 0.75rem;
+  }
+
+  .site-logo {
+    top: 0.6rem;
+    left: 0.6rem;
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  .theme-toggle {
+    top: 0.6rem;
+    right: 0.6rem;
+    width: 2.6rem;
+    height: 2.6rem;
+  }
 }
 
 /* ---------- movimento reduzido ---------- */
