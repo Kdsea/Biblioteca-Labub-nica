@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biblioteca Labubônica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="/Logo icon.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <div class="night-sky" id="nightSky" aria-hidden="true"></div>
+
+  <img class="site-logo" src="/Logo icon.png" alt="Logo da Biblioteca Labubônica">
+
+  <button id="themeToggle" class="theme-toggle" aria-label="Alternar modo escuro" title="Alternar modo escuro">
+    <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <circle cx="12" cy="12" r="4.6" fill="currentColor"/>
+      <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path d="M12 2.5v2.4"/><path d="M12 19.1v2.4"/>
+        <path d="M4.2 4.2l1.7 1.7"/><path d="M18.1 18.1l1.7 1.7"/>
+        <path d="M2.5 12h2.4"/><path d="M19.1 12h2.4"/>
+        <path d="M4.2 19.8l1.7-1.7"/><path d="M18.1 5.9l1.7-1.7"/>
+      </g>
+    </svg>
+    <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z" fill="currentColor"/>
+    </svg>
+  </button>
+
+  <main class="stage">
+
+    <div class="book" id="book">
+
+      <!-- Capa -->
+      <button class="cover" id="cover" aria-label="Abrir o livro de histórias">
+        <svg class="cover-glyphs" viewBox="0 0 200 130" aria-hidden="true">
+          <path d="M100 22c-14 0-25 12-25 27 0 13 9 23 20 26-1-4-2-8-2-12 0-16 12-29 27-29 2 0 4 0 6 1-5-8-15-13-26-13Z" fill="var(--cover-ink)" opacity="0.9"/>
+          <circle cx="46" cy="30" r="2.4" fill="var(--cover-ink)" opacity="0.85"/>
+          <circle cx="150" cy="46" r="1.8" fill="var(--cover-ink)" opacity="0.7"/>
+          <circle cx="164" cy="24" r="2.6" fill="var(--cover-ink)" opacity="0.9"/>
+          <circle cx="34" cy="60" r="1.6" fill="var(--cover-ink)" opacity="0.6"/>
+        </svg>
+        <h1 class="cover-title">Contos para<br>Dormir para minha Labubuzinha</h1>
+        <p class="cover-hint">toque para abrir</p>
+        <span class="cover-clasp" aria-hidden="true"></span>
+      </button>
+
+      <!-- Miolo do livro -->
+      <div class="spread" id="spread">
+
+        <div class="page page-left" id="pageLeft">
+          <!-- conteúdo trocado via JS: sumário ou título da história -->
+        </div>
+
+        <div class="spine" aria-hidden="true"></div>
+
+        <div class="page-right-stack" id="pageRightStack">
+          <div class="page page-right" id="pageRight">
+            <!-- conteúdo trocado via JS: lista de histórias ou texto paginado -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+<script src="/javascript/script.js"></script>
+</body>
+</html>
